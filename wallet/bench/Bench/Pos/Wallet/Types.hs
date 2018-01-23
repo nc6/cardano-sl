@@ -22,11 +22,12 @@ data AdditionalBenchConfig = AdditionalBenchConfig
     , pathToReportFile  :: !FilePath
     }
 
--- |
+-- | Clarification which benchmark we want to use.
 data BenchEndpoint
     = GetHistoryBench
     | GetWalletsBench
     | NewPaymentBench
+    deriving (Show)
 
 -- | In the real-world delay between client calls is always random,
 -- so we define the range for random value generation.
